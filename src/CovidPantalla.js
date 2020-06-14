@@ -59,24 +59,30 @@ class CovidPantalla extends Component {
                             <Text style={ styles.texto}>Pais: </Text>
                             <Text style={ styles.itemss }> {posts.country}</Text>
                         </Row>
-                        <Row style={ styles.itemText2 }>
+                    </Col>
+                    <Col style={styles.contentText}>
+                    <Row style={ styles.itemText}>
+
                             <Text style={ styles.texto }>Confirmados: </Text>
                             <Text style={ styles.itemss }>  {posts.confirmed}</Text>
-                        </Row>
+                    </Row>
                     </Col>
                     <Col style={styles.contentText}>
-                        <Row style={ styles.itemText3}>
+                    <Row style={ styles.itemText}>
                             <Text style={ styles.texto }>Criticos: </Text>
                             <Text style={ styles.itemss }> {posts.critical} </Text>
-                        </Row>
-                        <Row style={ styles.itemText4}>
-                            <Text style={ styles.texto }>Recuperados: </Text>
-                            <Text style={ styles.itemss }> {posts.recovered} </Text>
-                        </Row>
-
+                    </Row>
                     </Col>
                     <Col style={styles.contentText}>
-                        <Row style={ styles.itemText5}>
+                    <Row style={ styles.itemText}>
+                            <Text style={ styles.texto }>Recuperados: </Text>
+                            <Text style={ styles.itemss }> {posts.recovered} </Text>
+                    </Row>
+                    </Col>
+
+                    
+                    <Col style={styles.contentText}>
+                        <Row style={ styles.itemText}>
                             <Text style={ styles.texto }>Muertes: </Text>
                             <Text style={ styles.itemss }> {posts.deaths} </Text>
                         </Row>
@@ -93,20 +99,13 @@ class CovidPantalla extends Component {
 const styles= StyleSheet.create({   
 
     content: {
-        height:'100%',
+        height:'200%',
         paddingTop:'10%',
         paddingBottom:'30%',
         flex: 1,
         alignItems: 'center',
-        flexDirection: 'column'
     },
-    itemImage: {
-        marginBottom:100,
-        paddingBottom:100,
-        width: '100%',
-        height: '50%',
-        borderWidth: 4,
-    },
+   
     itemText: {
         flex: 1,
         paddingVertical: '75%',
@@ -115,40 +114,27 @@ const styles= StyleSheet.create({
         flexDirection: 'column',
         width: '100%',
         borderWidth: 2,
-        
+        height: '100%',
         borderColor: '#ddd',
         borderBottomWidth: 3,
         elevation: 2,
         marginLeft: 5,
         marginRight: 5,
         marginTop: 5,
-
+        marginBottom : 5,
     },
     texto: {
         fontSize: 20,
         textAlign: 'center',
         color: 'white',
     },
-    contentImg: {
-        backgroundColor: 'white',
-        alignSelf: 'stretch',
-        alignItems: 'center',
-        height: '100%',
-
-
-    },
     contentText: {
         backgroundColor: 'white',
         alignItems: 'center',
+        height:'100%',
     },
     itemTitulo: {
         fontSize: 40,
-        textAlign: 'center',
-        marginVertical: 10,
-        color: 'black'
-    },
-    itemTitulo2: {
-        fontSize: 25,
         textAlign: 'center',
         marginVertical: 10,
         color: 'black'
@@ -158,75 +144,12 @@ const styles= StyleSheet.create({
         width: 100,
         height: 90,
         fontSize: 20,
-        color: 'white',
+        color: 'black',
         textAlign: 'center',
         paddingVertical: 15,
+        paddingBottom: 20,
     },
-    itemText2: {
-        flex: 1,
-        paddingVertical: '75%',
-        alignItems: 'center',
-        flexDirection: 'column',
-        backgroundColor: '#F6362A',
-        width: '100%',
-        borderWidth: 2,
-        borderColor: '#ddd',
-        borderBottomWidth: 3,
-        elevation: 2,
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: 5,
-
-    },
-    itemText3: {
-        flex: 1,
-        paddingVertical: '75%',
-        alignItems: 'center',
-        flexDirection: 'column',
-        backgroundColor: '#c1d90d',
-        width: '100%',
-        borderWidth: 2,
-        borderColor: '#ddd',
-        borderBottomWidth: 3,
-        elevation: 2,
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: 5,
-
-    },
-    itemText4: {
-        flex: 1,
-        paddingVertical: '75%',
-        alignItems: 'center',
-        flexDirection: 'column',
-        backgroundColor: '#57E411',
-        width: '100%',
-        borderWidth: 2,
-        borderColor: '#ddd',
-        borderBottomWidth: 3,
-        elevation: 2,
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: 5,
-
-    },
-    itemText5: {
-        flex: 1,
-        paddingVertical: '154%',
-        alignItems: 'center',
-        flexDirection: 'column',
-        backgroundColor: '#333732',
-        width: '100%',
-        borderWidth: 2,
-        borderRadius: 5,
-        borderColor: '#ddd',
-        borderBottomWidth: 3,
-        elevation: 2,
-        marginLeft: 5,
-        marginRight: 5,
-        marginTop: 5,
-
-    },
+   
 });
 
 export default CovidPantalla
